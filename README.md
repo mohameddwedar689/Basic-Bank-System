@@ -1,8 +1,6 @@
 # Basic Bank System
 
-This project is the main part of my work as a Web developer intern at [The Sparks Foundation](https://www.thesparksfoundationsingapore.org/) , the theme of this project is to create 
-
-a simple dynamic website 
+This project is the main part of my work as a Web developer intern at [The Sparks Foundation](https://www.thesparksfoundationsingapore.org/) , the theme of this project is to create a simple dynamic website 
 
 ## Coding Style
 
