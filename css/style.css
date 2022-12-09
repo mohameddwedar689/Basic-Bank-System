@@ -108,6 +108,58 @@ section {
     display: none;
 }
 /*--- Start Home Section ---*/
+.home {
+    padding: 0;
+}
+.home .landing {
+    background-repeat: no-repeat;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 82.8vh;
+}
+.home .landing .content {
+    width: 85rem;
+    text-align: center;
+    display: inline-block;
+}
+.home .landing .content span {
+    color: var(--light-white);
+    font-size: 2.2rem;
+    display: block;
+    padding-bottom: 1rem;
+}
+.home .landing .content h3 {
+    font-size: 6vw;
+    color: var(--white);
+    text-transform: uppercase;
+    line-height: 1;
+    text-shadow: var(--text-shadow);
+    padding: 1rem 0;
+}
+/*--- Start Footer Section ---*/
+.footer {
+    background-color: var(--main-color);
+    padding: 3rem 10%;
+    text-align: center;
+}
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(25rem , 1fr));
+    gap: 3rem;
+}
+.footer .box-container .box span{
+    color: var(--white);
+    font-size: 1.5rem;
+    display: block;
+}
+.footer .box-container .box span a {
+    color: var(--black);
+}
+/*--- End Footer Section ---*/
 /*--- Media Queries ---*/
 @media (max-width: 1200px) {
     section {

@@ -13,18 +13,39 @@
 <body>
     <!-- Header Section Start -->
     <section class="header">
-        <a href="home.php" class="logo">Bank System.</a>
+        <a href="index.php" class="logo">Bank System.</a>
 
         <nav class="navbar">
-            <a href="home.php">Home</a>
-            <a href="about.php">Customers</a>
-            <a href="package.php">Transfer</a>
-            <a href="book.php">Transfer History</a>
+            <a href="index.php">Home</a>
+            <a href="customers.php">Customers</a>
+            <a href="transfer.php">Transfer</a>
+            <a href="tranferhistory.php">Transfer History</a>
         </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>
     </section>
     <!-- Header Section End -->
+    <!-- Home Section Start -->
+    <div class="home">
+        <div class="landing" style="background-image: url(images/money.jpg);">
+            <div class="content">
+                <span>Money Transfer Easily</span>
+                <h3>Welcome</h3>
+                <h3>Bank System is ready</h3>
+                <a href="customers.php" class="btn">discover more</a>
+            </div>
+        </div>
+    </div>
+    <!-- Home Section End -->
+    <!-- Footer Section Start -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <span>All rights goas to <a href="https://www.linkedin.com/in/mohamed-dwedar" target="_blank">Mohamed Dwedar</a> & <a href="https://www.thesparksfoundationsingapore.org/" target="_blank">The Sparks Foundation</a></span>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
     <!-- custom js file link  -->
     <script type="text/javascript" src="js/script.js?v=<?php echo time();?>"></script>
 </body>
