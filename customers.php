@@ -26,7 +26,48 @@
     </section>
     <!-- Header Section End -->
     <!-- Customer Section Start-->
-    <h1>Customer</h1>
+    <section class="customers">
+        <table class="customers-table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>first name</th>
+                    <th>last name</th>
+                    <th>email</th>
+                    <th>balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    //start connection
+                    $connection = mysqli_connect("localhost" , "root" , "" , "bank_db");
+                    //try connection
+                    if($connection -> connect_error){
+                        die("Connection Failed:" . $connection -> connect_error);
+                    }
+
+                    // sql statement
+                    $sql = "SELECT id , first_name , last_name , email , balance from customers";
+
+                    $result = $connection -> query($sql);
+
+                    if($result -> num_rows > 0) {
+                        while($row = $result -> fetch_assoc())
+                        {
+                            echo "<tr><td>".$row["id"]."</td><td>".$row["first_name"]."</td><td>".$row["last_name"]."</td><td>".$row["email"]."</td><td>".$row["balance"];
+                        }
+                        echo "</table>";
+                    }
+                    else
+                    {
+                        echo "no result founded";
+                    }
+
+                    $connection -> close();
+                ?>
+            </tbody>
+        </table>
+    </section>
     <!-- Customer Section End -->
     <!-- Footer Section Start -->
     <section class="footer">
