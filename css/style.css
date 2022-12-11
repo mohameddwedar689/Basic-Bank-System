@@ -162,6 +162,31 @@ section {
     text-align: center;
     padding: 1.5rem;
 }
+/*--- Start Transfer Section ---*/
+.transfer .container{
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--light-bg);
+    padding: 20px;
+}
+.from , .to , .amount{
+    font-size: 1.5rem;
+}
+#form , #to , #amount{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+button[type=submit]:hover {
+    background-color: var(--main-color);
+}
+.btnholder {
+    text-align: center;
+}
 /*--- Start Footer Section ---*/
 .footer {
     background-color: var(--main-color);
