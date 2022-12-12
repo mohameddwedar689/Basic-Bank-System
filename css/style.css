@@ -187,6 +187,10 @@ button[type=submit]:hover {
 .btnholder {
     text-align: center;
 }
+section.hight {
+    height: auto;
+    padding-top: 1rem;
+}
 /*--- Start Footer Section ---*/
 .footer {
     background-color: var(--main-color);

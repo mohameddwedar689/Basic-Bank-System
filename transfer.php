@@ -105,6 +105,63 @@
         </div>
     </section>
     <!-- Transfer Section End -->
+    <!-- Select Customer Start -->
+    <section class="select-section">
+        <h1 class="heading-title">Select Customer</h1>
+        <form method="GET" class="select-form">
+            <input type="number" id="form" name="select" placeholder="Enter customer Id" require>
+            <div class="btnholder">
+                <button class="btn" type="submit" name="show">Show Customer</button>
+            </div>
+        </form>
+    </section>
+    <section class="customers hight">
+        <table class="customers-table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>first name</th>
+                    <th>last name</th>
+                    <th>email</th>
+                    <th>balance</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+                    //start connection
+                    $connection = mysqli_connect("localhost" , "root" , "" , "bank_db");
+                    //try connection
+                    if($connection -> connect_error){
+                        die("Connection Failed:" . $connection -> connect_error);
+                    }
+
+                    if(isset($_GET['show']))
+                    {
+                        $id = $_GET['select'];
+
+                         // sql statement
+                        $sql = "SELECT id , first_name , last_name , email , balance from customers WHERE id=$id";
+
+                        $result = $connection->query($sql);
+
+                        if($result->num_rows > 0) {
+                            while($row = $result -> fetch_assoc())
+                            {
+                                echo "<tr><td>".$row["id"]."</td><td>".$row["first_name"]."</td><td>".$row["last_name"]."</td><td>".$row["email"]."</td><td>".$row["balance"];
+                            }
+                            echo "</table>";
+                        }
+                        else if($result -> num_rows <= 0)
+                        {
+                            echo "<h4>no result founded</h4>";
+                        }
+                    }
+
+                ?>
+            </tbody>
+        </table>
+    </section>
+    <!-- Select Customer End -->
     <!-- Footer Section Start -->
     <section class="footer">
         <div class="box-container">
