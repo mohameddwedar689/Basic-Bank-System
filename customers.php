@@ -27,6 +27,7 @@
     <!-- Header Section End -->
     <!-- Customer Section Start-->
     <section class="customers">
+        <h1 class="heading-title">Our Customers</h1>
         <table class="customers-table">
             <thead>
                 <tr>

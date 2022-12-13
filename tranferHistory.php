@@ -26,7 +26,48 @@
     </section>
     <!-- Header Section End -->
     <!-- Transfer History Section Start-->
-    <h1>Transfer History</h1>
+    <section class="transfer-hist">
+        <h1 class="heading-title">Transfer History</h1>
+        <table class="transfer-table">
+            <thead>
+                <tr>
+                    <th>Sender ID</th>
+                    <th>Reciver ID</th>
+                    <th>Amount</th>
+                    <th>Data / Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    //start connection
+                    $connection = mysqli_connect("localhost" , "root" , "" , "bank_db");
+                    //try connection
+                    if($connection -> connect_error){
+                        die("Connection Failed:" . $connection -> connect_error);
+                    }
+
+                    // sql statement
+                    $sql = "SELECT sender_id , reciver_id , amount , date from transfer";
+
+                    $result = $connection -> query($sql);
+
+                    if($result -> num_rows > 0) {
+                        while($row = $result -> fetch_assoc())
+                        {
+                            echo "<tr><td>".$row["sender_id"]."</td><td>".$row["reciver_id"]."</td><td>".$row["amount"]."</td><td>".$row["date"];
+                        }
+                        echo "</table>";
+                    }
+                    else
+                    {
+                        echo "no result founded";
+                    }
+
+                    $connection -> close();
+                ?>
+            </tbody>
+        </table>
+    </section>
     <!-- Transfer History Section End -->
     <!-- Footer Section Start -->
     <section class="footer">

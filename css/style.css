@@ -141,24 +141,30 @@ section {
     padding: 1rem 0;
 }
 /*--- Start Customer Section ---*/
-.customers {
+.customers,
+.transfer-hist{
     overflow-x: auto;
     height: 82.8vh;
 }
-.customers .customers-table{
+.customers .customers-table,
+.transfer-hist .transfer-table{
     width: 100%;
     font-size: 1.5rem;
 }
-.customers .customers-table th {
+.customers .customers-table th,
+.transfer-hist .transfer-table th {
     background-color: var(--main-color);
     padding: 1rem;
 }
-.customers .customers-table tr:nth-child(even)
+.customers .customers-table tr:nth-child(even),
+.transfer-hist .transfer-table tr:nth-child(even)
 {
     background-color: #f2f2f2;
 }
 .customers .customers-table tr ,
-.customers .customers-table td {
+.customers .customers-table td ,
+.transfer-hist .transfer-table tr,
+.transfer-hist .transfer-table td{
     text-align: center;
     padding: 1.5rem;
 }
